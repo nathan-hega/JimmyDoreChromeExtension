@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked.
+ -->
+<html>
+  <head>
+    <title>Supprt Jimmy Dore!</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      html {
+        width: 234px;
+      }
+      #status {
+        color: red;
+        text-align: center;
+      }
+      #button {
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 1px 3px #666666;
+        -moz-box-shadow: 0px 1px 3px #666666;
+        box-shadow: 0px 1px 3px #666666;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #febd69;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+      }
+      #button:hover {
+        text-decoration: none;
+      }
+      #amazonLink {
+        text-decoration: none;
+      }
+      #amazonLink:focus {
+        outline: 0;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <a id="amazonLink">
+      <div hidden id="button">Support The Show!!</div>
+    </a>
+  </body>
+</html>
