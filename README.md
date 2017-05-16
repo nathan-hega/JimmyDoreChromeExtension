@@ -10,6 +10,20 @@ This chrome extension will help with that. It places a little Jimmy Dore icon ne
 ## Development
 This chrome extension is pretty basic right now. I am trying to connect to the Jimmy Dore show in order to get some support form them both in terms of permission to publish an extension that uses the show's name as well as icon / image support for the extension itself.
 
-I would like the functionality of this extension to be expanded even more so that if users go to Amazon without having the Jimmy Dore campaign activated via query parameters, the extension alerts them or automatically redirects them to the proper page. The idea is to make it so people **can not** forget to visit Amazon without first considering Jimmy Dore. I was hoping Amazon would make this easier for me by setting a cookie that I could check to see if users went to the Jimmy Dore website first. Unfortunately, it seems that the campaign information for Jimmy Dore is masked on their backend in some session cookies that I couldn't figure out, so another approach is required (possibly by searching Chrome's network history for a Jimmy Dore link?). Once I have some support form the show, I will dive into this - or, other fans of the show will help make this extension even better!
+I would like the functionality of this extension to be expanded even more so that if users go to Amazon without having the Jimmy Dore campaign activated via query parameters, the extension alerts them or automatically redirects them to the proper page. **The idea is to make it so fans can not forget to visit Amazon without first considering Jimmy Dore.** I was hoping Amazon would make this easier for me by setting a cookie that I could check to see if users went to the Jimmy Dore website first. Unfortunately, it seems that the campaign information for Jimmy Dore is masked on their backend in some session cookies that I couldn't figure out, so another approach is required (possibly by searching Chrome's network history for a Jimmy Dore link?). Once I have some support form the show, I will dive into this - or, other fans of the show will help make this extension even better!
 
 Read more about Chrome extensions [here](https://developer.chrome.com/extensions/overview).
+
+## Current State
+
+_Error support for parse and network issues._
+
+![screen shot 2017-05-12 at 5 32 51 pm](https://cloud.githubusercontent.com/assets/2591298/26087496/163fbebe-39bf-11e7-8f34-21b0d7235547.png)
+
+_JD Icon with a tooltip_
+
+![screen shot 2017-05-12 at 5 30 41 pm](https://cloud.githubusercontent.com/assets/2591298/26087497/16427fb4-39bf-11e7-929b-d2cad2aa68df.png)
+
+_Button that contains the Amazon link._
+
+![screen shot 2017-05-12 at 5 33 15 pm](https://cloud.githubusercontent.com/assets/2591298/26087498/1642c6b8-39bf-11e7-8d24-9f22f9faca56.png)
