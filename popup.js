@@ -2,20 +2,29 @@
  * @param {function(error, url)} callback - Called when the amazon link has
  *   been found or an error occurrs.
  */
-function getAmazonUrl(callback) {
+function getJimmyDoreContent(callback) {
   var jimmyDoreShow = 'http://www.jimmydorecomedy.com';
   var x = new XMLHttpRequest();
   x.open('GET', jimmyDoreShow);
   x.responseType = 'document';
   x.onload = function() {
-    var links = this.responseXML &&
-                this.responseXML.getElementById("amazonblock") &&
-                this.responseXML.getElementById("amazonblock").getElementsByTagName("a");
+    if (!this.responseXML) {
+      return callback("Unable to parse Amazon URL.", null);
+    }
+    var data = {
+      link: null,
+      image: null
+    }
 
-    var link = (links && links.length) ? links[0].href : null;
+    var amazonBlock = this.responseXML.querySelector("#amazonblock");
+    var link = amazonBlock && amazonBlock.querySelector("a");
+    data.link = (link) ? link.href : null;
 
-    if (link) {
-      return callback(null, link);
+    var image = amazonBlock && amazonBlock.querySelector("img");
+    data.image = (image) ? image.src : null;
+
+    if (data.link && data.image) {
+      return callback(null, data);
     } else {
       return callback("Unable to parse Amazon URL.", null);
     }
@@ -34,17 +43,17 @@ function renderError(error) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  getAmazonUrl(function (error, link) {
+  getJimmyDoreContent(function (error, data) {
     if (error) {
       renderError(error);
     } else {
       var a = document.getElementById('amazonLink');
       a.onclick = function () {
-        chrome.tabs.create({ url: link });
+        chrome.tabs.create({ url: data.link });
       };
 
-      var button = document.getElementById('button');
-      button.hidden = false;
+      var button = document.getElementById('support');
+      button.src = data.image;
     }
   });
 });
