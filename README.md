@@ -24,6 +24,6 @@ _JD Icon with a tooltip_
 
 ![screen shot 2017-05-12 at 5 30 41 pm](https://cloud.githubusercontent.com/assets/2591298/26087497/16427fb4-39bf-11e7-929b-d2cad2aa68df.png)
 
-_Button that contains the Amazon link._
+_JD Amazon Image_
 
-![screen shot 2017-05-12 at 5 33 15 pm](https://cloud.githubusercontent.com/assets/2591298/26087498/1642c6b8-39bf-11e7-8d24-9f22f9faca56.png)
+![screen shot 2017-05-22 at 11 36 36 am](https://cloud.githubusercontent.com/assets/2591298/26316648/f339e934-3ee2-11e7-9fe0-8a1ba04b2aef.png)
